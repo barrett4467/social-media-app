@@ -9,7 +9,32 @@ form.addEventListener("submit", e => {
 
     formValidation();
 });
+let data = {};
 
 let formValidation = () => {
-
+    if(input.value === ""){
+        msg.innerHTML = "Post cannot be blank";
+        console.log("failure");
+    } else {
+        acceptData();
+    }
 }; 
+
+
+let acceptData = () =>{
+    data["text"] = input.value;
+    createPost();
+};
+let createPost = () => {
+    console.log(data.text);
+    posts.innerHTML += `
+        <div>
+            <p>${data.text} </p>
+            <span class="options">
+                <i onClick="editPost(this)" class="fas fa-edit"></i>
+                <i onClick="editPost(this)" class="fas fa-trash-alt"></i>
+            </span>
+        </div>
+    `;
+    input.value = "";
+};
