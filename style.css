@@ -1,6 +1,10 @@
+* {
+   margin: 2%;
+   background-color: lightGrey;
+}
 body{
    font-family: sans-serif;
-   margin:  0 50px; 
+   margin:  0 auto; 
 }
 .container {
     display: flex;
@@ -13,6 +17,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+textarea {
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgba(234, 201, 218, 0.8);
 }
 .options {
     display: flex;
